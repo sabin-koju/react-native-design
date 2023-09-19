@@ -1,4 +1,5 @@
 export const Sizing = {
+  size1: 1,
   size4: 4,
   size8: 8,
   size16: 16,

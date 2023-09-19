@@ -1,10 +1,10 @@
 import React from "react";
-import { SvgXml } from "react-native-svg";
+import { NumberProp, SvgXml } from "react-native-svg";
 
 interface SVGIconProps {
   svg: string;
-  width?: number;
-  height?: number;
+  width?: NumberProp;
+  height?: NumberProp;
   fill?: string;
 }
 
