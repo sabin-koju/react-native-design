@@ -60,7 +60,7 @@ const heading = {
   headingFontWeight: "700" as any,
 };
 
-export const Typograhpy = {
+export const Typography = {
   ...body,
   ...heading,
   ...label,

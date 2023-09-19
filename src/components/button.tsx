@@ -9,13 +9,14 @@ import { useTheme } from "../utility/theme-context";
 import { Sizing } from "../styles/sizing";
 import { Spacing } from "../styles/spacing";
 import { Radius } from "../styles/radius";
-import { Typograhpy } from "../styles/typography";
+import { Typography } from "../styles/typography";
 import React, { ReactNode } from "react";
 import SVGIcon from "./svg-icon";
 import { IconAlert } from "./icons/alert";
 
 interface TiButtonProps {
   accessibilityLabel?: string;
+  accessibilityHint?: string;
   disabled?: boolean;
   icon?: string;
   isLoading?: boolean;
@@ -26,6 +27,7 @@ interface TiButtonProps {
 
 export default function TiButton({
   accessibilityLabel,
+  accessibilityHint,
   disabled,
   icon,
   isLoading,
@@ -46,9 +48,9 @@ export default function TiButton({
       gap: Spacing.space8,
     },
     baseText: {
-      fontSize: Typograhpy.labelFontSize.md,
-      lineHeight: Typograhpy.labelLineHeight.md,
-      fontWeight: Typograhpy.labelFontWeight,
+      fontSize: Typography.labelFontSize.md,
+      lineHeight: Typography.labelLineHeight.md,
+      fontWeight: Typography.labelFontWeight,
     },
     filled: {
       backgroundColor: themeStyles.bgPrimary,
@@ -94,7 +96,10 @@ export default function TiButton({
       ]}
       onPress={onPress}
       disabled={disabled}
-      accessibilityLabel={accessibilityLabel}>
+      accessibilityLabel={accessibilityLabel}
+      accessibilityHint={accessibilityHint}
+      accessibilityRole="button"
+    >
       {isLoading && <ActivityIndicator size={"small"} color={fgColor} />}
       {icon && <SVGIcon svg={icon} fill={fgColor} />}
       <Text style={[styles.baseText, variantTextStyles]}>{title}</Text>

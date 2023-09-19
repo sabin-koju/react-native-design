@@ -22,7 +22,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     colorScheme || "light"
   );
 
-  console.log({ colorScheme: useColorScheme() });
   const toggleTheme = () => {
     setCurrentTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };

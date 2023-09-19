@@ -93,17 +93,17 @@ const neutralColors = {
 
 // surface
 const surfaceLight = {
-  surfaceBase: "#FDF8F7",
+  surfaceBase: "#FBFAF9",
   surface100: "#FFFFFF",
-  surface200: "#f8f0ed",
-  surface300: "#ede4e0",
+  surface200: "#F6F4F3",
+  surface300: "#F9F4F3",
 };
 
 const surfaceDark = {
-  surfaceBase: "#040404",
-  surface100: "#0F0C0B",
-  surface200: "#161110",
-  surface300: "#1b1614",
+  surfaceBase: "#0F0D0C",
+  surface100: "#1A1817",
+  surface200: "#262423",
+  surface300: "#262423",
 };
 
 // border
