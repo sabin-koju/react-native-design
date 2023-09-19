@@ -109,15 +109,15 @@ export default function AppWrapper() {
               <Jersey
                 size={Sizing.size80}
                 number="11"
-                colorBack="#4c2ccc"
-                colorSleeve="#412c91"
+                colorBack="#8c2ccc"
+                colorSleeve="#812c91"
                 colorText={themeStyles.white}
               />
               <Jersey
                 size={Sizing.size80}
-                number="11"
+                number="12"
                 colorBack="#cc2cbc"
-                colorSleeve="#922187"
+                colorSleeve="#a22187"
                 colorText={themeStyles.white}
               />
             </View>
