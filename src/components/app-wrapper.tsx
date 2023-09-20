@@ -1,12 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import TiButton, { ButtonVariant } from "./button";
 import { useTheme } from "../utility/theme-context";
 import { Typography } from "../styles/typography";
@@ -16,6 +9,19 @@ import { IconAlert } from "./icons/alert";
 import Jersey from "./jersey";
 import TiAvatar, { AvatarSizes } from "./avatar";
 import { Sizing } from "../styles/sizing";
+import TiIconContainer from "./icon-container";
+import { IconFootball } from "./icons/football";
+import { IconArrowGraph } from "./icons/arrow-graph";
+import { IconArrowRepeatAll } from "./icons/arrow-repeate-all";
+import { IconArrowLeft } from "./icons/arrow-left";
+import { IconArrowRight } from "./icons/arrow-right";
+import { IconVAR } from "./icons/var";
+import { IconChat } from "./icons/chat";
+import { IconSwipeUp } from "./icons/swipe-up";
+import { IconSwipeDown } from "./icons/swipe-down";
+import { IconCardYellow } from "./icons/card-yellow";
+import { IconCardDoubleYellow } from "./icons/card-double-yellow";
+import { IconCardRed } from "./icons/card-red";
 
 export default function AppWrapper() {
   const { toggleTheme, themeStyles, theme } = useTheme();
@@ -171,6 +177,7 @@ export default function AppWrapper() {
             {surfaceOptions.map((surface, index) => {
               return (
                 <View
+                  key={index}
                   style={{
                     alignItems: "center",
                     paddingVertical: Spacing.space48,
@@ -190,6 +197,56 @@ export default function AppWrapper() {
                 </View>
               );
             })}
+          </View>
+
+          {/* icon container */}
+          <View style={styles.section}>
+            <Text style={styles.text}>Icon Container</Text>
+            <View
+              style={{
+                flexDirection: "row",
+                flexWrap: "wrap",
+                gap: Spacing.space24,
+              }}
+            >
+              <TiIconContainer
+                svg={IconFootball}
+                bgColor={themeStyles.bgSuccess}
+              />
+              <TiIconContainer
+                svg={IconFootball}
+                bgColor={themeStyles.bgDanger}
+              />
+              <TiIconContainer
+                svg={IconArrowRepeatAll}
+                bgColor={themeStyles.bgInfo}
+              />
+              <TiIconContainer
+                svg={IconSwipeUp}
+                bgColor={themeStyles.bgSuccess}
+              />
+              <TiIconContainer
+                svg={IconSwipeDown}
+                bgColor={themeStyles.bgDanger}
+              />
+              <TiIconContainer svg={IconVAR} bgColor={themeStyles.bgInfo} />
+              <TiIconContainer svg={IconChat} bgColor={themeStyles.bgInfo} />
+              <TiIconContainer
+                svg={IconCardYellow}
+                bgColor={themeStyles.bgDark}
+                avoidColorOverride={true}
+              />
+              <TiIconContainer
+                svg={IconCardDoubleYellow}
+                bgColor={themeStyles.bgDark}
+                avoidColorOverride={true}
+              />
+              <TiIconContainer
+                svg={IconCardRed}
+                bgColor={themeStyles.bgDark}
+                avoidColorOverride={true}
+              />
+            </View>
           </View>
         </View>
       </ScrollView>
