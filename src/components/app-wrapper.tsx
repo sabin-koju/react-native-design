@@ -171,34 +171,6 @@ export default function AppWrapper() {
             </View>
           </View>
 
-          {/* surface */}
-          <View style={styles.section}>
-            <Text style={styles.text}>Surface</Text>
-            {surfaceOptions.map((surface, index) => {
-              return (
-                <View
-                  key={index}
-                  style={{
-                    alignItems: "center",
-                    paddingVertical: Spacing.space48,
-                    paddingHorizontal: Spacing.space16,
-                    borderRadius: Radius.xxl,
-                    backgroundColor: themeStyles[`surface${surface}`],
-                    borderWidth: Sizing.size1,
-                    borderColor: themeStyles[`border100`],
-                  }}
-                >
-                  <Text
-                    style={{
-                      color: themeStyles.text100,
-                      fontWeight: Typography.labelFontWeight,
-                    }}
-                  >{`Surface${surface}`}</Text>
-                </View>
-              );
-            })}
-          </View>
-
           {/* icon container */}
           <View style={styles.section}>
             <Text style={styles.text}>Icon Container</Text>
@@ -247,6 +219,34 @@ export default function AppWrapper() {
                 avoidColorOverride={true}
               />
             </View>
+          </View>
+
+          {/* surface */}
+          <View style={styles.section}>
+            <Text style={styles.text}>Surface</Text>
+            {surfaceOptions.map((surface, index) => {
+              return (
+                <View
+                  key={index}
+                  style={{
+                    alignItems: "center",
+                    paddingVertical: Spacing.space48,
+                    paddingHorizontal: Spacing.space16,
+                    borderRadius: Radius.xxl,
+                    backgroundColor: themeStyles[`surface${surface}`],
+                    borderWidth: Sizing.size1,
+                    borderColor: themeStyles[`border100`],
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: themeStyles.text100,
+                      fontWeight: Typography.labelFontWeight,
+                    }}
+                  >{`Surface${surface}`}</Text>
+                </View>
+              );
+            })}
           </View>
         </View>
       </ScrollView>
